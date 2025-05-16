@@ -17,4 +17,5 @@ body {
 
     img:hover {
       transform: rotate(360deg);
+      cursor: pointer;
     }
