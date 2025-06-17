@@ -1,65 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body {
-        background-image: url('/kissmyAssets/iceCreamSmolBoi.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Sticky Niky</title>
+  <style>
+    /* Static background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url('/kissmyAssets/iceCreamSmolBoi.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow-y: scroll;
+    }
 
-      #background-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-width: 100vw;
-        min-height: 100vh;
-        object-fit: cover;
-        z-index: -1; /*behind content */
-      }
+    /* Scrollable content area */
+    .content {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
 
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #663399; /* Optional accent */
+    }
+
+    @media (max-width: 600px) {
       .content {
-        position: fixed;
-        top: 0;
-        left: 25%;
-        z-index: 1;
-        color: white;
-        text-align: center;
-        padding: 100px;
+        padding: 1rem;
       }
 
-      .ice-cream {
-        width: 333px;
-        transition: transform 0.6s ease;
+      h1 {
+        font-size: 2rem;
       }
+    }
+  </style>
+</head>
+<body>
 
-      .ice-cream:hover {
-        transform: rotate(360deg);
-      }
-    </style>
-    <title>who is niky anyway?</title>
-  </head>
-  <body>
+  <div class="content">
+    <h1>About Me</h1>
+    <p>Hey there! I’m <span class="highlight">Niky</span>, a digital artist and creative technologist based in the Midwest. My work blends code, visuals, and play—ranging from generative art and projection mapping to brand activations and tactile workshops.</p>
 
-    <video autoplay muted loop playsinline id=""backgrounds-video">
-    <source src="kissmyAssets/niky.mp4" type="video/mp4" />
-Your browser does not support the video.
-</video>
+    <p>I’ve spent the last decade designing interactive media for public spaces, community events, and education initiatives. I’m especially passionate about accessible tools, glitch aesthetics, and building joyful entry points into creative tech.</p>
 
-<div class="content">
-    <img src="/kissmyAssets/iceCreamBROWNCONESmolBoi.png" alt="thow that asset in a circle" class="ice-cream">
-    <script>
-      document.querySelector('.ice-cream').addEventListener('click', () => {
-        window.open('https://iamniky.github.io/portfolio/', '_blank');
-      });
-    </script>
-          </div>
+    <p>Outside of coding and visuals, I’ve done extensive work as a brand ambassador and field specialist, engaging with real-world audiences through events, demos, and immersive installations.</p>
 
-  </body>
+    <p>Whether I’m animating a vector creature, debugging a Hydra synth sketch, or running a DIY workshop with curious kids—my favorite projects are the ones that spark connection.</p>
+  </div>
+
+</body>
 </html>
