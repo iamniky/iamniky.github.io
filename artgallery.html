@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Sticky Niky</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('/kissmyAssets/iceCreamSmolBoi.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h1>Portfolio Gallery</h1>
+    <div class="gallery">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 1">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 2">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 3">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 4">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 5">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 6">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 7">
+      <img src="/kissmyAssets/iceCream.jpg" alt="Art 8">
+      <!-- Add or swap more as needed -->
+    </div>
+  </div>
+
+</body>
+</html>
