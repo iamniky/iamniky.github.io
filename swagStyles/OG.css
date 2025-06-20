@@ -3,75 +3,74 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    img {
-      width: 150px; /* make image smaller */
-      transition: transform 0.6s ease;
-    }
+img {
+  width: 150px; /* make image smaller */
+  transition: transform 0.6s ease;
+}
 
-    img:hover {
-      transform: rotate(360deg);
-      cursor: pointer;
-    }
+img:hover {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
 
+.splash-container {
+  position: relative;
+  width: 333px;
+  cursor: pointer;
+}
 
+.ice-cream {
+  width: 100%;
+  transition: transform 0.6s ease;
+  display: block;
+}
 
-    .splash-container {
-      position: relative;
-      width: 333px;
-      cursor: pointer;
-    }
+.splash-container:hover .ice-cream {
+  transform: rotate(360deg);
+}
 
-    .ice-cream {
-      width: 100%;
-      transition: transform 0.6s ease;
-      display: block;
-    }
+.menu-text {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 0;
+  letter-spacing: 1px;
+  display: none;
+}
 
-    .splash-container:hover .ice-cream {
-      transform: rotate(360deg);
-    }
+.splash-container:hover .menu-text {
+  display: block;
+}
 
-    .menu-text {
-      position: absolute;
-      top: -40px;
-      width: 100%;
-      text-align: center;
-      font-family: monospace;
-      font-size: 1rem;
-      color: white;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 5px 0;
-      letter-spacing: 1px;
-      display: none;
-    }
+.menu-text span {
+  margin: 0 10px;
+}
 
-    .splash-container:hover .menu-text {
-      display: block;
-    }
+/* ✅ Responsive styles for small screens (like mobile) */
+@media (max-width: 768px) {
+  .splash-container {
+    width: 70vw;
+  }
 
-    .menu-text span {
-      margin: 0 10px;
-    }
+  .menu-text {
+    display: block;  /* ✅ Always show on mobile */
+    font-size: 0.9rem;
+    top: -35px;
+  }
 
-    /* ✅ Responsive styles */
-    @media (max-width: 480px) {
-      .splash-container {
-        width: 70vw;
-      }
-
-      .menu-text {
-        font-size: 0.9rem;
-        top: -35px;
-      }
-
-      .menu-text span {
-        margin: 0 6px;
-      }
-    }
+  .menu-text span {
+    margin: 0 6px;
+  }
+}
